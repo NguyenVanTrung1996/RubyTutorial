@@ -1,0 +1,22 @@
+<div class="container">
+  <% flash.each do |value| %>
+    <div class="text-success text-center">
+      <%= value[1] %>
+    </div>
+  <% end %>
+  <div class="card mx-auto mt-5" style="width: 40%;">
+    <div class="card-body">
+      <h5 class="card-title text-center font-weight-bold">User Info</h5>
+      <div class="row my-3">
+        <div class="col-sm-5 col-md-3"><strong>Content:</strong></div>
+        <div class="col-sm-5 col-md-9 "><%= @micropost.content %></div>
+      </div>
+      <div class="row my-3">
+        <div class="col-sm-5 col-md-3"><strong>User:</strong></div>
+        <div class="col-sm-5 col-md-9"><%= getUser(@micropost.user_id) %></div>
+      </div>
+      <%= link_to 'Edit', edit_micropost_path(@micropost) %> |
+      <%= link_to 'Back', microposts_path %>
+    </div>
+  </div>
+</div>
