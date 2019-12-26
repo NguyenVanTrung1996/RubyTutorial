@@ -21,6 +21,11 @@
           </div>
         </div>
 
+        <%= f.label :remember_me, class: "col-sm-9 offset-sm-3 col-form-label" do %>
+          <%= f.check_box :remember_me %>
+          <span>Remember me on this computer</span>
+        <% end %>
+
         <div class="form-group row mt-5">
           <div class="col-sm-12 text-center">
             <%= f.submit "Login", class: "btn btn-primary" %>
