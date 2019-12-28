@@ -6,19 +6,25 @@
       <table class="table table-striped">
         <tr>
           <th scope="col">ID</th>
+          <th scope="col">Image</th>
           <th scope="col">Name</th>
           <th scope="col">Email</th>
+          <th scope="col">Action</th>
         </tr>
         <tbody>
-        <% @user.each do |user| %>
-          <tr>
-            <th scope="row"><%= user.id %></th>
-            <td><%= user.name %></td>
-            <td><%= user.email %></td>
-          </tr>
-        <% end %>
+        <%= render @user %>
         </tbody>
       </table>
+      <div class="text-center">
+        <%#= will_paginate @user %>
+        <%= will_paginate(@user, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
+      </div>
     </div>
   </div>
+
 </div>
+<style>
+  ul{
+    margin: 0 auto;
+  }
+</style>

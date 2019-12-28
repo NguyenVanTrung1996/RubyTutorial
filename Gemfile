@@ -12,6 +12,9 @@ gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "jquery-rails"
 gem "bcrypt","3.1.12"
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :production do
   gem "pg", "0.20.0"
